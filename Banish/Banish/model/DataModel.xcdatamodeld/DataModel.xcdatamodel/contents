@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+    <entity name="BanishEntity" representedClassName=".BanishEntity" syncable="YES">
+        <attribute name="ext" attributeType="String" syncable="YES"/>
+        <attribute name="height" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" attributeType="Integer 64" minValueString="0" syncable="YES"/>
+        <attribute name="imageUrl" attributeType="String" syncable="YES"/>
+        <attribute name="thumbUrl" attributeType="String" syncable="YES"/>
+        <attribute name="width" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="relImage" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="BanishImage" inverseName="banish" inverseEntity="BanishImage" syncable="YES"/>
+    </entity>
+    <entity name="BanishImage" representedClassName=".BanishImage" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="banish" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BanishEntity" inverseName="relImage" inverseEntity="BanishEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BanishEntity" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="BanishImage" positionX="-27" positionY="27" width="128" height="75"/>
+    </elements>
+</model>
